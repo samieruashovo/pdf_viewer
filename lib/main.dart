@@ -1,9 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/api/pdf_picker.dart';
-import 'package:flutter_application_1/page/pdf_viewer_page.dart';
-import 'package:flutter_application_1/widget/button_widget.dart';
+
+import 'filePicker/pdf_picker.dart';
+import 'page/pdf_viewer_page.dart';
+import 'widget/button_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,14 +35,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('PDF Viewer'),
         backgroundColor: Colors.red[700],
-
       ),
       body: Center(
         child: Padding(
@@ -70,5 +69,4 @@ class _MainPageState extends State<MainPage> {
   void openPDF(BuildContext context, File file) => Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => PDFViewerPage(file: file)),
       );
-
 }

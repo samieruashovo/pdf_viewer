@@ -21,7 +21,7 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
   Widget build(BuildContext context) {
 
     final name = basename(widget.file.path);
-    final text = '${indexPage + 1} of ${pages}';
+    final text = '${indexPage + 1} of $pages';
     return Scaffold(
       appBar: AppBar(
         title: Text(name),
